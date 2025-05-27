@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 import { clsx } from "clsx";
 
-import { menuData } from "../../../data/menu.data";
+import { menuData } from "@/data/menu.data";
 
 import style from "./Menu.module.scss";
 

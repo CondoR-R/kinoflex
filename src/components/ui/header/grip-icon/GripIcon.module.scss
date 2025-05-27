@@ -1,0 +1,54 @@
+.grip {
+  cursor: pointer;
+
+  .tl,
+  .tr,
+  .bl,
+  .br {
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    .tl {
+      cx: 4;
+      cy: 4;
+    }
+
+    .tr {
+      cx: 20;
+      cy: 4;
+    }
+
+    .bl {
+      cx: 4;
+      cy: 20;
+    }
+
+    .br {
+      cx: 20;
+      cy: 20;
+    }
+  }
+
+  &:active {
+    .tl {
+      cx: 5;
+      cy: 5;
+    }
+
+    .tr {
+      cx: 19;
+      cy: 5;
+    }
+
+    .bl {
+      cx: 5;
+      cy: 19;
+    }
+
+    .br {
+      cx: 19;
+      cy: 19;
+    }
+  }
+}

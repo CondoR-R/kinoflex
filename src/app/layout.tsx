@@ -5,7 +5,7 @@ import Providers from "./Providers";
 
 import MainWrapper from "@/components/main-wrapper/MainWrapper";
 
-import "../sass/index.scss";
+import "@/sass/index.scss";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={`${montserrat.variable}`}>
         <Providers>
           <MainWrapper />
