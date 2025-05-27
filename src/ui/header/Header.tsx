@@ -2,8 +2,8 @@ import React from "react";
 import { Bell, Search } from "lucide-react";
 import Image from "next/image";
 
-import Menu from "@/components/ui/header/menu/Menu";
-import GripIcon from "@/components/ui/header/grip-icon/GripIcon";
+import Menu from "@/ui/header/menu/Menu";
+import GripIcon from "@/ui/header/grip-icon/GripIcon";
 
 import style from "./Header.module.scss";
 

@@ -1,4 +1,4 @@
-import Filters from "@/components/ui/home/filters/Filters";
+import Filters from "@/ui/home/filters/Filters";
 
 import style from "./page.module.scss";
 

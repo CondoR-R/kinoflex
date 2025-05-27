@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 
 import Providers from "./Providers";
 
-import MainWrapper from "@/components/main-wrapper/MainWrapper";
+import Header from "@/ui/header/Header";
 
 import "@/sass/index.scss";
 
@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${montserrat.variable}`}>
         <Providers>
-          <MainWrapper />
+          <Header />
           {children}
         </Providers>
       </body>

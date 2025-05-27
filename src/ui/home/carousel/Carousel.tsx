@@ -1,5 +1,7 @@
+import React from "react";
+
 const Carousel: React.FC = () => {
-  return <div></div>;
+  return <div>{}</div>;
 };
 
 export default Carousel;
