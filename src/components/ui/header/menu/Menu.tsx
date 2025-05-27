@@ -13,8 +13,6 @@ import style from "./Menu.module.scss";
 const Menu: React.FC = () => {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   const active = style.active;
 
   return (

@@ -1,0 +1,30 @@
+@use "@/sass/helpers" as *;
+
+.list {
+  @include flex-center;
+
+  border: 0.1rem solid color-mix(in srgb, var(--color-main) 25%, transparent);
+  border-radius: 0.6rem;
+
+  .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  .activeBtn {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+
+    &:hover {
+      color: var(--color-background);
+    }
+  }
+}
