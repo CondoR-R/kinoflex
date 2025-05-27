@@ -1,1 +1,12 @@
 @use "./helpers";
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--color-main);
+  background-color: var(--color-background);
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1.6rem;
+}
