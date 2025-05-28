@@ -4,7 +4,13 @@
   @include flex-center;
 
   flex-direction: column;
-  height: calc(100vh - 7rem);
+  justify-content: space-between;
+  height: 95vh;
+  .header {
+    @include flex-center;
+
+    flex-direction: column;
+  }
 }
 
 .title {

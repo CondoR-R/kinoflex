@@ -1,6 +1,7 @@
 .wrapper {
-  height: 64vh;
+  height: 65rem;
   width: 100%;
+
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -8,6 +9,7 @@
 
 .carousel {
   position: relative;
-  transform-origin: 50% 120%;
+  transform-origin: 50% 100%;
   transition: all 0.5s linear;
+  translate: -50% 0;
 }
