@@ -7,6 +7,6 @@ export interface ICaroucel {
 }
 
 export const useCarouselStore = create<ICaroucel>((set) => ({
-  activeCardIndex: 4,
+  activeCardIndex: 0,
   setActiveCardIndex: (index) => set({ activeCardIndex: index }),
 }));

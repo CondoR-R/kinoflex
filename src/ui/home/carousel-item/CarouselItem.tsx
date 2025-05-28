@@ -24,9 +24,19 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
     mediaData.length
   );
 
+  const isActive = activeCardIndex === index;
+
+  const zIndex = isActive
+    ? 10
+    : activeCardIndex === index + 1 || activeCardIndex === index - 1
+    ? 5
+    : activeCardIndex === index + 2 || activeCardIndex === index - 3
+    ? 1
+    : 0;
+
   const initialAnimation = {
-    scale: 1,
-    zIndex: 0,
+    scale: isActive ? 1 : 1,
+    zIndex,
     y: translateY,
     x: translateX,
     rotate,
@@ -43,8 +53,7 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
       <img
         className={style.poster}
         style={{
-          filter:
-            index === activeCardIndex ? "grayscale(0)" : "grayscale(100%)",
+          filter: isActive ? "grayscale(0)" : "grayscale(100%)",
         }}
         width={300}
         height={450}

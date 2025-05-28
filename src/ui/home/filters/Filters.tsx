@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { motion } from "motion/react";
 
 import { filtersData } from "@/data/filters.data";
-import { useFilterStore } from "@/store/store";
+import { useFilterStore } from "@/store/filters.store";
 
 import style from "./Filters.module.scss";
 

@@ -14,8 +14,8 @@ const Carousel: React.FC = () => {
   const { activeCardIndex } = useCarouselStore();
 
   const initialAnimation = {
-    // rotate: activeCardIndex * 36,
-    rotate: 0,
+    rotate: activeCardIndex * 36,
+    // rotate: 0,
   };
 
   return (
