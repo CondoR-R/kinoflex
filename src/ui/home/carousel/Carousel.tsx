@@ -11,11 +11,10 @@ import CarouselItem from "../carousel-item/CarouselItem";
 import style from "./Carousel.module.scss";
 
 const Carousel: React.FC = () => {
-  const { activeCardIndex } = useCarouselStore();
+  const { rotateAngle } = useCarouselStore();
 
   const initialAnimation = {
-    rotate: activeCardIndex * 36,
-    // rotate: 0,
+    rotate: rotateAngle,
   };
 
   return (

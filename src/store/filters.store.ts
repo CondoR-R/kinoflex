@@ -6,6 +6,7 @@ export interface IStore {
   setCurrentFilter: (filter: TFilter) => void;
 }
 
+// state manager для фильтра на Home
 export const useFilterStore = create<IStore>((set) => ({
   currentFilter: "Популярные",
   setCurrentFilter: (filter) => set({ currentFilter: filter }),

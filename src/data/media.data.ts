@@ -1,5 +1,7 @@
 import { IMediaItem } from "@/types/media.types";
 
+// данные о карточках на home
+// поменять на данные с API
 export const mediaData: IMediaItem[] = [
   {
     id: 1,

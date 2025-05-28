@@ -58,6 +58,8 @@ const Filters: React.FC = () => {
           </li>
         ))}
       </ul>
+
+      {/* индикатор выбранного фильтра */}
       <motion.div
         layout
         className={style.active}

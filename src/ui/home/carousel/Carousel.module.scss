@@ -1,12 +1,13 @@
 .wrapper {
-  height: 65vh;
+  height: 64vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  //   overflow: hidden;
+  overflow: hidden;
 }
 
 .carousel {
   position: relative;
-  //   transform-origin: center 10rem;
+  transform-origin: 50% 120%;
+  transition: all 0.5s linear;
 }

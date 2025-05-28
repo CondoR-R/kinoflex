@@ -2,6 +2,7 @@ import React from "react";
 
 import style from "./GripIcon.module.scss";
 
+// иконка с 4 точками слева сверху
 const GripIcon: React.FC = () => {
   return (
     <svg

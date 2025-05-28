@@ -10,6 +10,7 @@ import { menuData } from "@/data/menu.data";
 
 import style from "./Menu.module.scss";
 
+// навигационное меню
 const Menu: React.FC = () => {
   const pathname = usePathname();
 

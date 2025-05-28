@@ -15,7 +15,7 @@ const Header: React.FC = () => {
         <Link href={"/"} title="Перейти на главную">
           <GripIcon />
         </Link>
-        {/* <Menu /> */}
+        <Menu />
       </div>
 
       <div className={style.right}>

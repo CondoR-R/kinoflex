@@ -7,6 +7,7 @@ import Header from "@/ui/header/Header";
 
 import "@/sass/index.scss";
 
+// шрифт страницы (подключается _globals.scss через переменную)
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin", "cyrillic"],
@@ -14,6 +15,7 @@ const montserrat = Montserrat({
   preload: true,
 });
 
+// информация о сайте
 export const metadata: Metadata = {
   title: "Kinoflex",
   description: "Онлайн кинотеатр по типу Netflix, очень много анимаций",

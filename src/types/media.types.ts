@@ -1,5 +1,7 @@
 import { TFilter } from "./filters.types";
 
+// типы для карточек на Home
+// настроить под API!!!!
 export interface IMediaItem {
   id: number;
 
