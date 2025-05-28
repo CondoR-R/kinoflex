@@ -1,4 +1,4 @@
-import { TFilter } from "@/data/filters.data";
+import { TFilter } from "@/types/filters.types";
 import { create } from "zustand";
 
 export interface IStore {

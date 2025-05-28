@@ -1,7 +1,4 @@
-export interface IMenuItem {
-  name: string;
-  url: string;
-}
+import { IMenuItem } from "@/types/menu.types";
 
 export const menuData: IMenuItem[] = [
   { name: "Главная", url: "/" },

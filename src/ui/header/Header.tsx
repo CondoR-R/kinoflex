@@ -6,25 +6,21 @@ import Menu from "@/ui/header/menu/Menu";
 import GripIcon from "@/ui/header/grip-icon/GripIcon";
 
 import style from "./Header.module.scss";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
     <header className={style.header}>
       <div className={style.left}>
-        <GripIcon />
-        <Menu />
+        <Link href={"/"} title="Перейти на главную">
+          <GripIcon />
+        </Link>
+        {/* <Menu /> */}
       </div>
 
       <div className={style.right}>
         <Search />
         <Bell />
-        <Image
-          className={style.avatar}
-          height={50}
-          width={50}
-          src="/avatar.jpg"
-          alt="Фото профиля"
-        />
       </div>
     </header>
   );

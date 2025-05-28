@@ -4,11 +4,12 @@
   @include flex-center;
 
   flex-direction: column;
+  height: calc(100vh - 7rem);
 }
 
 .title {
   font-size: 3.2em;
   text-align: center;
   width: 90vw;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }

@@ -1,6 +1,7 @@
 import Filters from "@/ui/home/filters/Filters";
 
 import style from "./page.module.scss";
+import Carousel from "@/ui/home/carousel/Carousel";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         Откройте для Себя неограниченное колличество контента
       </h1>
       <Filters />
+      <Carousel />
     </div>
   );
 }
