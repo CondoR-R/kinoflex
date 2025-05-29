@@ -6,7 +6,7 @@ import * as m from "motion/react-m";
 import { IMediaItem } from "@/types/media.types";
 import { mediaData } from "@/data/media.data";
 
-import { useGetStyleRotation } from "./getGetStyleRotation";
+import { getStyleRotation } from "./getGetStyleRotation";
 
 import style from "./CarouselItem.module.scss";
 import { useCarouselStore } from "@/store/carousel.store";
@@ -20,7 +20,7 @@ interface Props {
 const CarouselItem: React.FC<Props> = ({ item, index }) => {
   const { activeCardIndex, rotateAngle, setActiveCardIndex, setRotateAngle } =
     useCarouselStore();
-  const { rotate, x, y } = useGetStyleRotation(index, mediaData.length);
+  const { rotate, x, y } = getStyleRotation(index, mediaData.length);
 
   const isActive = activeCardIndex === index;
 

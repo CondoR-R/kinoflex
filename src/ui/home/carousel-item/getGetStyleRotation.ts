@@ -1,4 +1,4 @@
-export const useGetStyleRotation = (index: number, total: number) => {
+export const getStyleRotation = (index: number, total: number) => {
   /**
    * вычисляем угол поворота карточки из условия, что карточка с индесом 9
    * должна быть под углом 0, а карточка с индексом 4 (середина) под углом 180
