@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import * as m from "motion/react-m";
 
 import { ICard } from "@/types/media.types";
@@ -19,10 +19,18 @@ interface Props {
 }
 
 const CarouselItem: React.FC<Props> = ({ item, index }) => {
-  const { activeCardIndex, rotateAngle, setActiveCardIndex, setRotateAngle } =
-    useCarouselStore();
+  const {
+    activeCardIndex,
+    rotateAngle,
+    radius,
+    isHide,
+    setActiveCardIndex,
+    setRotateAngle,
+    setRadius,
+    setIsHide,
+  } = useCarouselStore();
 
-  const { rotate, x, y } = getStyleRotation(index, mediaData.length);
+  const { rotate, x, y } = getStyleRotation(index, mediaData.length, radius);
 
   const isActive = activeCardIndex === index;
 
@@ -40,7 +48,7 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
     : 0;
 
   const initialAnimation = {
-    scale: isActive ? 1.05 : 1,
+    scale: isHide ? 0 : isActive ? 1.05 : 1,
     zIndex,
     x,
     y,
@@ -49,6 +57,8 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
 
   const onClickBtn = () => {
     if (activeCardIndex == index) {
+      setRadius(0);
+      setIsHide(true);
       return;
     }
 
