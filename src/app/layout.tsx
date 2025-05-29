@@ -7,6 +7,7 @@ import { ThemeProvider } from "./ThemeProvider";
 import Header from "@/ui/header/Header";
 
 import "@/sass/index.scss";
+import Footer from "@/ui/footer/Footer";
 
 // шрифт страницы (подключается _globals.scss через переменную)
 const montserrat = Montserrat({
@@ -55,6 +56,7 @@ export default function RootLayout({
           >
             <Header />
             {children}
+            <Footer />
           </ThemeProvider>
         </Providers>
       </body>

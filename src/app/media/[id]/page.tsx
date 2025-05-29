@@ -1,11 +1,10 @@
 import { notFound } from "next/navigation";
 
 import Backdrop from "@/ui/media/backdrop/Backdrop";
-
-import style from "./page.module.scss";
 import Description from "@/ui/media/description/Description";
 import About from "@/ui/media/about/About";
-import Footer from "@/ui/footer/Footer";
+
+import style from "./page.module.scss";
 
 const Page = async (props: { params: Promise<{ id: number }> }) => {
   const params = await props.params;
@@ -18,14 +17,11 @@ const Page = async (props: { params: Promise<{ id: number }> }) => {
   //   }
 
   return (
-    <>
-      <main className={style.media}>
-        <Backdrop />
-        <Description />
-        <About />
-      </main>
-      <Footer />
-    </>
+    <main className={style.media}>
+      <Backdrop />
+      <Description />
+      <About />
+    </main>
   );
 };
 
