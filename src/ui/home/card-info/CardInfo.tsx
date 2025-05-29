@@ -1,14 +1,14 @@
 import React from "react";
 import { Dot, MonitorPlay, Star } from "lucide-react";
 
-import { IMediaItem } from "@/types/media.types";
+import { ICard } from "@/types/media.types";
 import { useCarouselStore } from "@/store/carousel.store";
 
 import style from "./CardInfo.module.scss";
 
 interface Props {
   index: number;
-  item: IMediaItem;
+  item: ICard;
 }
 
 const CardInfo: React.FC<Props> = ({ index, item }) => {
@@ -39,12 +39,12 @@ const CardInfo: React.FC<Props> = ({ index, item }) => {
         <p>{item.year}</p>
         <Dot />
         {item.genres.map((gener, index) => {
-          if (index > 1) return <></>;
+          if (index > 1) return;
           return (
-            <>
-              <p key={index}>{gener.name}</p>
+            <p key={index}>
+              <span key={index}>{gener.name}</span>
               {index !== 1 && <Dot />}
-            </>
+            </p>
           );
         })}
       </div>

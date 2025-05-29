@@ -2,19 +2,16 @@ import { TFilter } from "./filters.types";
 
 // типы для карточек на Home
 // настроить под API!!!!
-export interface IMediaItem {
+export interface ICard {
   id: number;
 
   title: string;
   rating: number;
 
   poster: string;
-  backdrop: string;
 
   type: TFilter;
   year: number;
-
-  seasons?: ISeason[];
 
   genres: { name: string }[];
 }

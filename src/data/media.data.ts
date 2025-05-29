@@ -1,8 +1,8 @@
-import { IMediaItem } from "@/types/media.types";
+import { ICard } from "@/types/media.types";
 
 // данные о карточках на home
 // поменять на данные с API
-export const mediaData: IMediaItem[] = [
+export const mediaData: ICard[] = [
   {
     id: 1,
     title: "Во все тяжкие",
@@ -10,8 +10,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,
@@ -35,8 +33,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,
@@ -60,8 +56,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,
@@ -85,8 +79,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,
@@ -110,8 +102,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,
@@ -135,8 +125,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,
@@ -160,8 +148,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,
@@ -185,8 +171,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,
@@ -210,8 +194,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,
@@ -235,8 +217,6 @@ export const mediaData: IMediaItem[] = [
 
     poster:
       "https://image.openmoviedb.com/kinopoisk-images/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/orig",
-    backdrop:
-      "https://image.openmoviedb.com/kinopoisk-ott-images/212840/2a0000017802c1ad72babf5fca7bb369de8e/orig",
 
     type: "Популярные",
     year: 2008,

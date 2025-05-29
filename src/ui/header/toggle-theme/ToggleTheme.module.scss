@@ -1,0 +1,22 @@
+.btn {
+  border: 0.2rem solid var(--color-accent);
+  border-radius: 1rem;
+
+  padding: 1rem;
+  background-color: var(--color-background);
+
+  display: flex;
+
+  align-items: center;
+  justify-self: center;
+
+  .placeholder {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}

@@ -1,12 +1,13 @@
 import React from "react";
 import { Bell, Search } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 
 import Menu from "@/ui/header/menu/Menu";
 import GripIcon from "@/ui/header/grip-icon/GripIcon";
 
+import ToggleTheme from "./toggle-theme/ToggleTheme";
+
 import style from "./Header.module.scss";
-import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const Header: React.FC = () => {
 
       <div className={style.right}>
         <Search />
-        <Bell />
+        <ToggleTheme />
       </div>
     </header>
   );

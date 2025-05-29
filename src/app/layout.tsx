@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 
 import Providers from "./Providers";
+import { ThemeProvider } from "./ThemeProvider";
 
 import Header from "@/ui/header/Header";
 
@@ -27,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="ru" suppressHydrationWarning>
       <head>
         <link
           rel="icon"
@@ -46,8 +47,15 @@ export default function RootLayout({
       </head>
       <body className={`${montserrat.variable}`}>
         <Providers>
-          <Header />
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+          </ThemeProvider>
         </Providers>
       </body>
     </html>

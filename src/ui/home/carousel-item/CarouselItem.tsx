@@ -2,9 +2,8 @@
 
 import React from "react";
 import * as m from "motion/react-m";
-import { Star } from "lucide-react";
 
-import { IMediaItem } from "@/types/media.types";
+import { ICard } from "@/types/media.types";
 import { mediaData } from "@/data/media.data";
 import { useCarouselStore } from "@/store/carousel.store";
 
@@ -15,7 +14,7 @@ import style from "./CarouselItem.module.scss";
 import CardInfo from "../card-info/CardInfo";
 
 interface Props {
-  item: IMediaItem;
+  item: ICard;
   index: number;
 }
 
