@@ -2,16 +2,17 @@
 
 import React from "react";
 import * as m from "motion/react-m";
+import { Star } from "lucide-react";
 
 import { IMediaItem } from "@/types/media.types";
 import { mediaData } from "@/data/media.data";
+import { useCarouselStore } from "@/store/carousel.store";
 
 import { getStyleRotation } from "./getGetStyleRotation";
+import { getNextAngle } from "./getNextAngle";
 
 import style from "./CarouselItem.module.scss";
-import { useCarouselStore } from "@/store/carousel.store";
-import { getNextAngle } from "./getNextAngle";
-import { Star } from "lucide-react";
+import CardInfo from "../card-info/CardInfo";
 
 interface Props {
   item: IMediaItem;
@@ -21,6 +22,7 @@ interface Props {
 const CarouselItem: React.FC<Props> = ({ item, index }) => {
   const { activeCardIndex, rotateAngle, setActiveCardIndex, setRotateAngle } =
     useCarouselStore();
+
   const { rotate, x, y } = getStyleRotation(index, mediaData.length);
 
   const isActive = activeCardIndex === index;
@@ -32,7 +34,9 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
       activeCardIndex === index - 1 ||
       (activeCardIndex === 9 && index === 0)
     ? 5
-    : activeCardIndex === index + 2 || activeCardIndex === index - 2
+    : activeCardIndex === index + 2 ||
+      activeCardIndex === index - 2 ||
+      (activeCardIndex === 9 && index === 1)
     ? 1
     : 0;
 
@@ -45,6 +49,10 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
   };
 
   const onClickBtn = () => {
+    if (activeCardIndex == index) {
+      return;
+    }
+
     setActiveCardIndex(index);
 
     const nextAngle = getNextAngle(index, activeCardIndex);
@@ -71,15 +79,7 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
         alt={item.title}
         draggable="false"
       />
-      <div className={style.top}>
-        <p
-          className={style.rating}
-          style={{ scale: activeCardIndex === index ? 1 : 0 }}
-        >
-          <Star className={style.star} />
-          <span className={style.text}>10</span>
-        </p>
-      </div>
+      <CardInfo index={index} item={item} />
     </m.button>
   );
 };

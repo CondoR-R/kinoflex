@@ -1,0 +1,72 @@
+@use "@/sass/helpers" as *;
+
+.top {
+  width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  .rating {
+    @include flex-center;
+
+    column-gap: 0.5rem;
+
+    color: var(--color-black);
+    background-color: var(--color-yellow);
+
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+
+    transition: all 0.5s;
+
+    .star {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
+    .text {
+      font-size: 1.4rem;
+    }
+  }
+
+  .type {
+    @include flex-center;
+
+    column-gap: 0.5rem;
+
+    color: var(--color-white);
+    background-color: color-mix(in srgb, var(--color-black) 75%, transparent);
+
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+
+    transition: all 0.5s;
+
+    .icon {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
+    .text {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.bottom {
+  padding: 0.5rem;
+
+  font-size: 1.4rem;
+  color: color-mix(in srgb, var(--color-white) 75%, var(--color-black));
+
+  display: flex;
+  justify-content: center;
+  column-gap: 0.1rem;
+
+  transition: all 0.5s;
+
+  p {
+    margin: 0;
+  }
+}

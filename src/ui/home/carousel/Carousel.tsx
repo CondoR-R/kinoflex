@@ -23,7 +23,7 @@ const Carousel: React.FC = () => {
         className={style.carousel}
         initial={{ rotate: 0 }}
         animate={initialAnimation}
-        transition={{ type: "keyframes", stiffnes: 230, damping: 32 }}
+        transition={{ type: "keyframes", duration: 0.5 }}
       >
         {mediaData.map((media, index) => (
           <CarouselItem key={media.id} item={media} index={index} />
