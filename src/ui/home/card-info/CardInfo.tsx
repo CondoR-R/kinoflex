@@ -22,7 +22,7 @@ const CardInfo: React.FC<Props> = ({ index, item }) => {
           style={{ scale: activeCardIndex === index ? 1 : 0 }}
         >
           <Star className={style.star} />
-          <span className={style.text}>{item.rating}</span>
+          <span className={style.text}>{item.rating.imdb}</span>
         </p>
         <p
           className={style.type}
@@ -41,10 +41,10 @@ const CardInfo: React.FC<Props> = ({ index, item }) => {
         {item.genres.map((gener, index) => {
           if (index > 1) return;
           return (
-            <p key={index}>
+            <React.Fragment key={index}>
               <span key={index}>{gener.name}</span>
               {index !== 1 && <Dot />}
-            </p>
+            </React.Fragment>
           );
         })}
       </div>

@@ -1,0 +1,18 @@
+.rating {
+  display: flex;
+  column-gap: 1rem;
+
+  background-color: color-mix(in srgb, var(--color-black) 75%, transparent);
+  border-radius: 0.5rem;
+
+  .imdb {
+    background-color: var(--color-yellow);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .value {
+    color: var(--color-white);
+    padding: 0.5rem;
+  }
+}

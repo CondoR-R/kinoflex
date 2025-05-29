@@ -8,7 +8,7 @@ export default function Home() {
     <div className={style.home}>
       <div className={style.header}>
         <h1 className={style.title}>Неограниченное колличество контента</h1>
-        <Filters />
+        {/* <Filters /> */}
       </div>
       <Carousel />
     </div>

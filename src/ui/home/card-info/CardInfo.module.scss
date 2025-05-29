@@ -58,6 +58,7 @@
   padding: 0.5rem;
 
   font-size: 1.4rem;
+  background-color: color-mix(in srgb, var(--color-black) 50%, transparent);
   color: color-mix(in srgb, var(--color-white) 75%, var(--color-black));
 
   display: flex;

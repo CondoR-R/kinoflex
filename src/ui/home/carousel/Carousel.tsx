@@ -3,7 +3,7 @@
 import React from "react";
 import * as m from "motion/react-m";
 
-import { mediaData } from "@/data/media.data";
+import { cardsData } from "@/data/media.data";
 import { useCarouselStore } from "@/store/carousel.store";
 
 import CarouselItem from "../carousel-item/CarouselItem";
@@ -25,7 +25,7 @@ const Carousel: React.FC = () => {
         animate={initialAnimation}
         transition={{ type: "keyframes", duration: 0.5 }}
       >
-        {mediaData.map((media, index) => (
+        {cardsData.map((media, index) => (
           <CarouselItem key={media.id} item={media} index={index} />
         ))}
       </m.div>

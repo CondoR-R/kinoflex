@@ -1,17 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import * as m from "motion/react-m";
+import { useRouter } from "next/navigation";
 
 import { ICard } from "@/types/media.types";
-import { mediaData } from "@/data/media.data";
+import { cardsData } from "@/data/media.data";
 import { useCarouselStore } from "@/store/carousel.store";
+
+import CardInfo from "../card-info/CardInfo";
 
 import { getStyleRotation } from "./getGetStyleRotation";
 import { getNextAngle } from "./getNextAngle";
 
 import style from "./CarouselItem.module.scss";
-import CardInfo from "../card-info/CardInfo";
 
 interface Props {
   item: ICard;
@@ -30,7 +32,7 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
     setIsHide,
   } = useCarouselStore();
 
-  const { rotate, x, y } = getStyleRotation(index, mediaData.length, radius);
+  const { rotate, x, y } = getStyleRotation(index, cardsData.length, radius);
 
   const isActive = activeCardIndex === index;
 
@@ -55,10 +57,21 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
     rotate,
   };
 
+  const router = useRouter();
+
   const onClickBtn = () => {
     if (activeCardIndex == index) {
       setRadius(0);
       setIsHide(true);
+
+      setTimeout(() => {
+        router.push(`/media/${item.id}`);
+      }, 300);
+
+      setTimeout(() => {
+        setRadius(350);
+        setIsHide(false);
+      }, 500);
       return;
     }
 
@@ -84,8 +97,8 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
         }}
         width={300}
         height={450}
-        src={item.poster}
-        alt={item.title}
+        src={item.poster.url ? item.poster.url : ""}
+        alt={item.name}
         draggable="false"
       />
       <CardInfo index={index} item={item} />

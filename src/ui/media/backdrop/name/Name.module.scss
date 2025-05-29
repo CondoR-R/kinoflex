@@ -1,0 +1,17 @@
+.name {
+  //   background-color: color-mix(in srgb, var(--color-black) 25%, transparent);
+  color: var(--color-white);
+
+  //   padding: 1rem 2rem;
+  //   border-radius: 1rem;
+
+  .logo {
+    height: 12rem;
+    width: auto;
+  }
+
+  .span {
+    font-size: 10rem;
+    font-weight: 700;
+  }
+}
