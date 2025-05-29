@@ -34,7 +34,10 @@ const CardInfo: React.FC<Props> = ({ index, item }) => {
       </div>
       <div
         className={style.bottom}
-        style={{ scale: activeCardIndex === index ? 1 : 0 }}
+        style={{
+          transform:
+            activeCardIndex === index ? "translateY(0)" : "translateY(100%)",
+        }}
       >
         <p>{item.year}</p>
         <Dot />

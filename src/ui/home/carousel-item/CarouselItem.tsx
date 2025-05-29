@@ -65,7 +65,7 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
       setIsHide(true);
 
       setTimeout(() => {
-        router.push(`/media/${item.id}`);
+        router.push(`/films/${item.id}`);
       }, 300);
 
       setTimeout(() => {

@@ -1,4 +1,5 @@
-import Backdrop from "@/ui/media/backdrop/Backdrop";
+import Backdrop from "@/ui/backdrop/Backdrop";
+import { notFound } from "next/navigation";
 
 import style from "./page.module.scss";
 
@@ -9,12 +10,12 @@ const Page = async (props: { params: Promise<{ id: number }> }) => {
   //   const mediaItem = mediaData.find((mediaItem) => mediaItem.slug === slug);
 
   //   if (!mediaItem) {
-  //     notFound();
+  // notFound();
   //   }
 
   return (
     <div className={style.media}>
-      <Backdrop />
+      <Backdrop>1</Backdrop>
     </div>
   );
 };
