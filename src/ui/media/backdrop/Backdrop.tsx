@@ -6,11 +6,7 @@ import style from "./Backdrop.module.scss";
 import Genre from "./genre/Genre";
 import IMdbRating from "./iMdb-rating/IMdbRating";
 
-const Backdrop = ({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) => {
+const Backdrop = () => {
   return (
     <>
       <div className={style.backdrop}>
@@ -27,17 +23,18 @@ const Backdrop = ({
           width={1000}
           height={1000}
         />
-        <div className={style.info}>
-          <Name />
-          <div className={style.genres}>
-            {mediaData.genres.map(({ name }, index) => (
-              <Genre key={index} genre={name} />
-            ))}
+        <div className={style.wrapper}>
+          <div className={style.info}>
+            <Name />
+            <div className={style.genres}>
+              {mediaData.genres.map(({ name }, index) => (
+                <Genre key={index} genre={name} />
+              ))}
+            </div>
+            <IMdbRating />
           </div>
-          <IMdbRating />
         </div>
       </div>
-      {children}
     </>
   );
 };

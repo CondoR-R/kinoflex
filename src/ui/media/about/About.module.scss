@@ -1,0 +1,18 @@
+@use "@/sass/helpers" as *;
+
+.about {
+  @include center-1400;
+
+  .title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .list {
+    padding-inline: 1rem;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+}

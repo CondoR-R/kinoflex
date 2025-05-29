@@ -324,10 +324,10 @@ export const mediaData: IMediaItem = {
       "https://image.openmoviedb.com/kinopoisk-ott-images/374297/2a00000168e7cbf1bf723879ea306ad8f363/x1000",
   },
   rating: {
-    kp: 7.893,
+    kp: 7.9,
     imdb: 8,
     filmCritics: 8.1,
-    russianFilmCritics: 83.3333,
+    russianFilmCritics: 83.3,
     await: null,
   },
   votes: {

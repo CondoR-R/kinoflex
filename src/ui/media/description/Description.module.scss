@@ -1,0 +1,13 @@
+@use "@/sass/helpers" as *;
+
+.description {
+  @include center-1400;
+
+  padding-top: 4rem;
+  margin-bottom: 4rem;
+
+  .title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+}

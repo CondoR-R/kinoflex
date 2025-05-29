@@ -8,3 +8,8 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@mixin center-1400 {
+  width: 140rem;
+  margin: 0 auto;
+}
