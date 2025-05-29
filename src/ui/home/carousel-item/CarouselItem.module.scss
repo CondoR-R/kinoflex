@@ -1,3 +1,5 @@
+@use "@/sass/helpers" as *;
+
 .item {
   border: none;
   border-radius: 2rem;
@@ -13,7 +15,49 @@
 
   transition: all 0.1s linear;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   .poster {
     transition: all 0.5s;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .top {
+    width: 100%;
+    padding: 1rem;
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+
+    .rating {
+      @include flex-center;
+
+      column-gap: 0.5rem;
+
+      color: var(--color-main);
+      background-color: var(--color-yellow);
+
+      padding: 0.2rem 0.5rem;
+      border-radius: 1rem;
+
+      transition: all 0.5s;
+
+      .star {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+
+      .text {
+        font-size: 1.4rem;
+      }
+    }
   }
 }

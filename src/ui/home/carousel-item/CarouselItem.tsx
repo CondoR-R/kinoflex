@@ -11,6 +11,7 @@ import { getStyleRotation } from "./getGetStyleRotation";
 import style from "./CarouselItem.module.scss";
 import { useCarouselStore } from "@/store/carousel.store";
 import { getNextAngle } from "./getNextAngle";
+import { Star } from "lucide-react";
 
 interface Props {
   item: IMediaItem;
@@ -70,6 +71,15 @@ const CarouselItem: React.FC<Props> = ({ item, index }) => {
         alt={item.title}
         draggable="false"
       />
+      <div className={style.top}>
+        <p
+          className={style.rating}
+          style={{ scale: activeCardIndex === index ? 1 : 0 }}
+        >
+          <Star className={style.star} />
+          <span className={style.text}>10</span>
+        </p>
+      </div>
     </m.button>
   );
 };
